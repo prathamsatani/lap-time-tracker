@@ -87,6 +87,12 @@ class Visualizer:
             # Format Best Lap Time
             best = f"{car.best_lap:.2f}s" if car.best_lap else "--"
 
+            # Format Previous Laps
+            prev_laps = car.lap_times[-3:] # Get last 3 laps
+            prev_str = " ".join([f"{t:.1f}s" for t in prev_laps])
+            if not prev_str:
+                prev_str = "--"
+
             # Format Penalty State
             penalty = f"+{car.current_penalty:.1f}s"
             
@@ -94,7 +100,7 @@ class Visualizer:
             if now() < car.penalty_flash_until:
                 color = (0,0,255)
 
-            text = f"{car.name} | Curr {curr} | Best {best} | Pen {penalty}"
+            text = f"{car.name} | Curr {curr} | Best {best} | Prev [{prev_str}] | Pen {penalty}"
             
             # Text shadow for readability
             cv2.putText(frame, text, (22, y+2),

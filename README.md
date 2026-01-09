@@ -11,7 +11,7 @@ Empower your RC racing events with an automated, AI-driven lap timing system. Th
 
 *   **AI-Powered Detection**: Uses a custom-trained YOLO model to identify specific cars (e.g., "Blue Car", "Green Car").
 *   **Virtual Start/Finish Line**: Draw a finish line directly on the camera feed—no physical sensors/transponders required.
-*   **Real-Time HUD**: Displays current lap time, best lap, and penalty status overlaid on the video feed.
+*   **Real-Time HUD**: Displays current lap time, previous laps history, best lap, and penalty status overlaid on the video feed.
 *   **Race Control**:
     *   Manual penalty assignment (+2s hotkeys).
     *   Race reset functionality.
